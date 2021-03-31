@@ -9,9 +9,8 @@ public class Kadai002 {
   //1秒あたりに何文字入力できたか
     public static void main(String[] args) {
 
-        Typing t = new Typing();
-
         System.out.println("タイピングゲームスタート！５回正確に入力したら終了！");
+        Typing t = new Typing();
         t.play();
     }
 }

@@ -50,16 +50,17 @@ public class Typing {
         for (int i = 0; i < 50; i++) {
             question();
             if (i == 0) {
-                start_point = System.currentTimeMillis();
+                start_point = System.currentTimeMillis(); //計測のスタート
             }
             answer();
             judge();
-            if(Typing.success_count == 5) {
+            if(success_count == 5) {
                 end_point = System.currentTimeMillis();
                 long time = (end_point - start_point) / 1000;
                 System.out.println(time + "秒かかりました");
                 System.out.println("入力された文字数は" + this.word_count + "です");
-                System.out.println("1秒あたりの入力文字数は" + (Math.floor((this.word_count / (double)time) * 10) / 10) + "文字です");
+                System.out.println("1秒あたりの入力文字数は" +
+                (Math.floor((this.word_count / (double)time) * 10) / 10) + "文字です");
                 break;
             }
         }
